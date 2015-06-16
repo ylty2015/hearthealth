@@ -11,7 +11,7 @@
      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
 	<bean id="loginAction" class="com.hearthealth.run.account.LoginAction"
-		scope="prototype">
+		scope="prototype" lazy-init="false">
 		<property name="accountService" ref="accountService" />
 	</bean>
 	

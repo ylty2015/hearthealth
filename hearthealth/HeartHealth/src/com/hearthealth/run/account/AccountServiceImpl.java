@@ -1,13 +1,17 @@
 package com.hearthealth.run.account;
 
+import java.util.List;
+
+import com.hearthealth.run.bo.User;
+
 public class AccountServiceImpl implements AccountService{
 	private AccountDao accountDao;
 	
 	
 
 	@Override
-	public void queryAllDoctors() {
-		
+	public List<User> queryAllDoctors() {
+		return accountDao.queryAllDoctors();
 	}
 
 
