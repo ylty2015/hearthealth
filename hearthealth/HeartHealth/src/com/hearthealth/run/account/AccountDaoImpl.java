@@ -66,4 +66,30 @@ public class AccountDaoImpl implements AccountDao{
 		return conn;
 	}
 
+
+	@Override
+	public boolean registerUser(User user) {
+		Connection conn = createDBConnection();
+		StringBuilder sql = new StringBuilder();
+		sql.append("insert into user(username,password,real_name) values('");
+		sql.append(user.getUsername()).append("',");
+		sql.append("password('").append(user.getPassword()).append("'),'");
+		sql.append(user.getRealName());
+		sql.append("')");
+		logger.info("sql:"+sql.toString());
+		try {
+			PreparedStatement stmt = conn.prepareStatement(sql.toString());
+			int affectItemNum = stmt.executeUpdate();
+			if(affectItemNum==1){
+				return true;
+			}
+			else{
+				return false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
 }

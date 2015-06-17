@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
+encoding//WebRoot/pages/account/addUser.jsp=UTF-8
+encoding//WebRoot/pages/account/homepage_admin_index.jsp=UTF-8
+encoding//WebRoot/pages/account/register_success.jsp=UTF-8
 encoding//src/log4j.properties=UTF-8
 encoding/<project>=UTF-8

@@ -14,12 +14,21 @@
 		scope="prototype" lazy-init="false">
 		<property name="accountService" ref="accountService" />
 	</bean>
-	
-	<bean id="accountService" class="com.hearthealth.run.account.AccountServiceImpl" scope="prototype">
+
+	<bean id="registerUser" class="com.hearthealth.run.account.RegisterAction"
+		scope="prototype">
+		<property name="accountService" ref="accountService" />
+	</bean>
+
+
+	<bean id="accountService" class="com.hearthealth.run.account.AccountServiceImpl"
+		scope="prototype">
 		<property name="accountDao" ref="accountDao"></property>
 	</bean>
-	
-	<bean id="accountDao" class="com.hearthealth.run.account.AccountDaoImpl" scope="prototype">
+
+	<bean id="accountDao" class="com.hearthealth.run.account.AccountDaoImpl"
+		scope="prototype">
 	</bean>
+
 
 </beans>

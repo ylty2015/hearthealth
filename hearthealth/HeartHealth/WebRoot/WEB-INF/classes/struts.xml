@@ -10,6 +10,12 @@
 	<result name="error">/pages/account/loginFailure.jsp</result>
 	<result name="admin">/pages/account/homepage_admin.jsp</result>
 </action>
+
+<action name="registerUser" class="com.hearthealth.run.account.RegisterAction">
+	<result name="success">/pages/account/register_success.jsp</result>
+	<result name="error">/pages/account/register_failure.jsp</result>
+</action>
+
 </package>
 
 </struts>

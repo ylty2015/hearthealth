@@ -25,6 +25,13 @@ public class AccountServiceImpl implements AccountService{
 	public void setAccountDao(AccountDao accountDao) {
 		this.accountDao = accountDao;
 	}
+
+
+
+	@Override
+	public boolean registerUser(User user) {
+		return accountDao.registerUser(user);
+	}
 	
 	
 	
